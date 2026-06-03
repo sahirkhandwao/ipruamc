@@ -1,20 +1,205 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  --footer-bg: linear-gradient(90.26deg, rgb(19, 51, 89) 0.22%, rgb(1, 74, 128) 50.17%, rgb(50, 103, 143) 99.78%);
+  --footer-text: #ffffff;
+  --footer-bottom-bg: rgb(10, 29, 59);
+  --footer-link-color: rgba(255, 255, 255, 0.85);
+  --footer-heading-color: #ffffff;
+  --footer-max-width: 1080px;
+
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: var(--body-font-size-xs, 14px);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer {
+  visibility: hidden;
 }
 
-footer .footer p {
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+/* Section wrappers inside footer fragment */
+footer .section {
   margin: 0;
+  padding: 0;
+}
+
+footer .section > div {
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Footer Links Block */
+footer .footer-links-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .footer-links {
+  padding: 48px 0 24px;
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+footer .footer-links h3 {
+  color: var(--footer-heading-color);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+footer .footer-links li {
+  margin: 0 0 6px;
+}
+
+footer .footer-links a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+footer .footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Rows = 3-column grid on desktop */
+footer .footer-links > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-links > div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Footer App Block */
+footer .footer-app-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .footer-app {
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer .footer-app > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+footer .footer-app > div > div:first-child img {
+  max-height: 100px;
+  width: auto;
+}
+
+footer .footer-app h3 {
+  color: var(--footer-heading-color);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+footer .footer-app p {
+  margin: 4px 0;
+  display: inline-block;
+}
+
+footer .footer-app p a img,
+footer .footer-app p img {
+  max-height: 36px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Footer Bottom Block */
+footer .section.footer-bottom-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer .section.footer-bottom-container > div {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .footer-bottom-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .footer-bottom {
+  background: var(--footer-bottom-bg);
+  padding: 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer .footer-bottom > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  gap: 12px;
+}
+
+footer .footer-bottom p {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+footer .footer-bottom a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .footer-bottom a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+@media (width >= 900px) {
+  footer .footer-links {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  footer .footer-app {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  footer .footer-bottom {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }

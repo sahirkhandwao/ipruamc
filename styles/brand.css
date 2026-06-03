@@ -1,0 +1,17 @@
+:root {
+  --heading-font-family: "Mulish", "Lato", sans-serif;
+  --body-font-family: "Mulish", "Lato", sans-serif;
+  --background-color: #ffffff;
+  --text-color: rgb(0, 0, 0);
+  --link-color: rgb(19, 51, 89);
+  --link-hover-color: rgb(13, 35, 62);
+  --section-padding: 40px 0;
+  --nav-height: 107px;
+  --content-max-width: 1080px;
+  --brand-primary: rgb(19, 51, 89);
+  --brand-accent: #ff6600;
+  --brand-light-bg: rgb(255, 250, 246);
+  --brand-orange-bg: rgb(255, 227, 204);
+}
+
+html, body { overflow: auto !important; }

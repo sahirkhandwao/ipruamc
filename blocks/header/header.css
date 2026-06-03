@@ -1,9 +1,15 @@
 /* header and nav layout */
+header {
+  height: 107px;
+}
+
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #fff;
   width: 100%;
   z-index: 2;
   position: fixed;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #e8e8e8;
 }
 
 header nav {
@@ -35,17 +41,17 @@ header nav[aria-expanded='true'] {
     position: relative;
   }
 
-  header nav {
+  header nav,
+  header nav[aria-expanded='true'] {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
+    align-items: center;
+    gap: 0 40px;
+    max-width: 1200px;
     padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+    height: 107px;
   }
 }
 
@@ -55,7 +61,8 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: #133359;
+  text-decoration: none;
 }
 
 /* hamburger */
@@ -72,7 +79,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: #fff;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -149,7 +156,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 113px;
   height: auto;
 }
 
@@ -170,11 +177,11 @@ header nav[aria-expanded='true'] .nav-sections {
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  font-size: 16px;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -224,7 +231,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     margin: 0;
   }
 
@@ -269,4 +276,17 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #f37021, #ed1c24);
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
 }

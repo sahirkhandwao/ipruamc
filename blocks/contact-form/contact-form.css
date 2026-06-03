@@ -1,0 +1,160 @@
+/* Contact Form Block */
+.contact-form {
+  --cf-bg: rgb(255, 250, 246);
+  --cf-card-bg: #ffffff;
+  --cf-heading-color: rgb(19, 51, 89);
+  --cf-text-color: rgba(19, 51, 89, 0.7);
+  --cf-btn-bg: rgb(220, 96, 9);
+  --cf-btn-color: #ffffff;
+  --cf-tagline-color: rgba(19, 51, 89, 0.7);
+  --cf-padding: 48px;
+  --cf-border-radius: 12.8px;
+
+  background: var(--cf-bg);
+  padding: 24px 24px 48px;
+  font-family: var(--body-font-family, 'Mulish', sans-serif);
+}
+
+.contact-form-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+main > .section:has(.contact-form-wrapper) {
+  margin: 0;
+  background: var(--light-color);
+}
+
+/* Tagline row */
+.contact-form > div:first-child {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 0 16px;
+}
+
+.contact-form > div:first-child p {
+  font-size: 14px;
+  color: var(--cf-tagline-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Main content row (image + form) */
+.contact-form > div:nth-child(2) {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--cf-card-bg);
+  border-radius: var(--cf-border-radius);
+  padding: var(--cf-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Image cell */
+.contact-form > div:nth-child(2) > div:first-child {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form > div:nth-child(2) > div:first-child p {
+  margin: 0;
+}
+
+.contact-form > div:nth-child(2) > div:first-child img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Form content cell */
+.contact-form > div:nth-child(2) > div:nth-child(2) > p {
+  font-size: 14px;
+  color: var(--cf-text-color);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+/* Form fields list as static representation */
+.contact-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(19, 51, 89, 0.2);
+  font-size: 14px;
+  color: var(--cf-text-color);
+}
+
+/* CTA Button */
+main .contact-form a.button:any-link {
+  background: var(--cf-btn-bg);
+  color: var(--cf-btn-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+main .contact-form a.button:any-link:hover {
+  background: rgb(190, 82, 5);
+}
+
+/* Button wrapper */
+main .contact-form .button-wrapper {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* Disclaimer */
+.contact-form > div:nth-child(2) > div:nth-child(2) > p:last-child {
+  font-size: 11px;
+  color: rgba(19, 51, 89, 0.5);
+  margin-top: 16px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .contact-form > div:nth-child(2) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-form > div:nth-child(2) > div:first-child {
+    flex: 0 0 55%;
+  }
+
+  .contact-form > div:nth-child(2) > div:nth-child(2) {
+    flex: 1;
+    padding-left: 40px;
+  }
+}
+
+/* Heading fine-tuning */
+.contact-form > div:nth-child(2) > div:nth-child(2) h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--cf-heading-color);
+  margin: 0 0 8px;
+  line-height: 1.2;
+}

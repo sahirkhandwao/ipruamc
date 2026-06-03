@@ -1,0 +1,178 @@
+/* Knowledge Centre block */
+.knowledge-centre {
+  --kc-bg: rgb(255, 250, 246);
+  --kc-heading-color: rgb(19, 51, 89);
+  --kc-chip-active-bg: rgb(19, 51, 89);
+  --kc-chip-active-text: #ffffff;
+  --kc-chip-inactive-bg: #ffffff;
+  --kc-chip-inactive-text: rgb(19, 51, 89);
+  --kc-card-bg: #ffffff;
+  --kc-card-radius: 14px;
+  --kc-card-info-padding: 12px 24px 20px;
+  --kc-gap: 24px;
+
+  background: var(--kc-bg);
+  padding: 40px 0 66px;
+}
+
+.knowledge-centre-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.knowledge-centre .kc-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.knowledge-centre .kc-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--kc-heading-color);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.knowledge-centre .kc-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+
+.knowledge-centre .kc-tab {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid var(--kc-chip-active-bg);
+  transition: background 0.2s, color 0.2s;
+}
+
+.knowledge-centre .kc-tab.active {
+  background: var(--kc-chip-active-bg);
+  color: var(--kc-chip-active-text);
+}
+
+.knowledge-centre .kc-tab:not(.active) {
+  background: var(--kc-chip-inactive-bg);
+  color: var(--kc-chip-inactive-text);
+}
+
+.knowledge-centre .kc-cards {
+  display: flex;
+  gap: var(--kc-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.knowledge-centre .kc-card {
+  flex: 0 0 340px;
+  background: var(--kc-card-bg);
+  border-radius: var(--kc-card-radius);
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.knowledge-centre .kc-card picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.knowledge-centre .kc-card picture img,
+.knowledge-centre .kc-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.knowledge-centre .kc-card-info {
+  padding: var(--kc-card-info-padding);
+}
+
+.knowledge-centre .kc-card-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kc-heading-color);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.knowledge-centre .kc-card-info p {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  margin: 0;
+}
+
+.knowledge-centre .kc-footer {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 32px;
+  text-align: left;
+}
+
+main .knowledge-centre .kc-footer .button-wrapper {
+  display: inline;
+  margin: 0;
+}
+
+main .knowledge-centre .kc-footer a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--kc-heading-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+main .knowledge-centre .kc-footer a.button:any-link::after {
+  content: "\2192";
+  font-size: 16px;
+}
+
+main .knowledge-centre .kc-footer a.button:any-link:hover {
+  text-decoration: underline;
+}
+
+@media (width < 900px) {
+  .knowledge-centre .kc-cards {
+    padding: 0 16px;
+  }
+
+  .knowledge-centre .kc-card {
+    flex: 0 0 280px;
+  }
+
+  .knowledge-centre .kc-header,
+  .knowledge-centre .kc-tabs,
+  .knowledge-centre .kc-footer {
+    padding: 0 16px;
+  }
+
+  .knowledge-centre .kc-header h2 {
+    font-size: 28px;
+  }
+}
