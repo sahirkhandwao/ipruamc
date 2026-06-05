@@ -3,7 +3,7 @@ export default async function decorate(block) {
 
   // Add background SVG image
   const bgImg = document.createElement('img');
-  bgImg.src = '/drafts/images/heroHeaderDesktop.svg';
+  bgImg.src = '/assets/images/heroHeaderDesktop.svg';
   bgImg.alt = '';
   bgImg.className = 'hero-bg-image';
   bgImg.setAttribute('aria-hidden', 'true');
