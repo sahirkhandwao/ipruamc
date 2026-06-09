@@ -14,3 +14,12 @@ helix-importer-ui
 
 drafts
 .migration
+# Personals
+.github
+.agent
+.agents
+openspec
+graphify-out
+.rtk
+CLAUDE.md
+.claude
