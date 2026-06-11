@@ -28,6 +28,7 @@ export default async function decorate(block) {
           <a href="#" class="nav-link">Funds <span class="chevron-arrow"></span></a>
           <div class="mega-menu">
             <div class="mega-menu-content">
+            <img src="https://www.icicipruamc.com/blob/banner/homepage/Resources.jpg" class"menu-left-image">
               <div class="mega-menu-columns-only">
                 <div class="mega-menu-column">
                   <h3>Equity Funds</h3>
@@ -67,7 +68,8 @@ export default async function decorate(block) {
           <div class="mega-menu">
             <div class="mega-menu-content">
               <!-- Left Banner Column -->
-              <div class="mega-menu-banner">
+              <img src="https://www.icicipruamc.com/blob/banner/homepage/Resources.jpg" class"menu-left-image">
+              <!-- <div class="mega-menu-banner">
                 <div class="promo-card">
                   <span class="promo-badge">An Investor Education and Awareness Initiative</span>
                   <h2>Get the advantage of a 3-in-1 Fund</h2>
@@ -82,7 +84,7 @@ export default async function decorate(block) {
                   </p>
                   <div class="promo-footer">To know more, Visit: www.icicipruamc.com</div>
                 </div>
-              </div>
+              </div> -->
               
               <!-- Right Columns -->
               <div class="mega-menu-columns">

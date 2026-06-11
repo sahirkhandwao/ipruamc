@@ -14,7 +14,7 @@
 }
 
 /* Each row (after JS decorate) contains a single .quick-links-card link */
-.quick-links > div {
+.quick-links>div {
   display: flex;
   width: 160px;
   min-height: 144px;
@@ -26,7 +26,7 @@
   background: var(--background-color, #fff);
 }
 
-.quick-links > div:hover {
+.quick-links>div:hover {
   box-shadow: 0 2px 8px rgba(19, 51, 89, 0.12);
 }
 
@@ -44,6 +44,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #f9ebe0;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .quick-links .quick-links-icon img {
@@ -65,7 +73,7 @@
     justify-content: center;
   }
 
-  .quick-links > div {
+  .quick-links>div {
     width: calc(33.33% - var(--ql-gap));
     min-height: 120px;
   }

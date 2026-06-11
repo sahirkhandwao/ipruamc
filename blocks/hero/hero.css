@@ -9,11 +9,12 @@
   --hero-heading-size: 42px;
   --hero-desc-size: 20px;
   --hero-padding: 40px 24px;
-
   position: relative;
   background: var(--hero-bg);
   overflow: hidden;
   min-height: 496px;
+  max-width: 90rem;
+  margin: auto;
 }
 
 .hero .hero-bg-image {
@@ -21,7 +22,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 97%;
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
@@ -73,6 +74,7 @@
   max-width: 100%;
   width: 600px;
   height: auto;
+  border-radius: 1.25rem;
 }
 
 /* Buttons */
@@ -89,7 +91,7 @@ main .hero .hero-slide .hero-text a.button:any-link {
   font-size: 16px;
   font-weight: 700;
   padding: 8px 20px;
-  border-radius: 20px;
+  border-radius: 4px;
   text-decoration: none;
   border: none;
   white-space: nowrap;
@@ -105,28 +107,41 @@ main .hero .hero-slide .hero-text a.button.secondary:any-link {
 /* Dots navigation */
 .hero .hero-dots {
   position: absolute;
-  bottom: 20px;
-  left: 24px;
+  bottom: 43px;
+  right: 24px;
   display: flex;
-  gap: 8px;
+  gap: 24px;
   z-index: 2;
 }
 
 .hero .hero-dots button {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 2px solid rgb(19, 51, 89);
-  background: transparent;
+  background: white;
   cursor: pointer;
   padding: 0;
+  border: none;
+  opacity: 0.6;
+  position: relative;
 }
 
 .hero .hero-dots button.active {
-  background: rgb(19, 51, 89);
+  opacity: 1;
 }
 
-@media (width >= 900px) {
+.hero .hero-dots button.active::after {
+  border-radius: 3.125rem;
+  content: "";
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border: .063rem solid #fff;
+  position: absolute;
+  top: -0.5625rem;
+  left: -0.55rem;
+}
+
+@media (width >=900px) {
   .hero {
     --hero-padding: 60px 80px;
     --hero-heading-size: 46px;
@@ -148,6 +163,6 @@ main .hero .hero-slide .hero-text a.button.secondary:any-link {
   }
 
   .hero .hero-dots {
-    left: 80px;
+    right: 21rem;
   }
 }
