@@ -7,15 +7,24 @@
   --ql-gap: 16px;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--ql-gap);
   justify-content: flex-start;
   padding: 16px 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.quick-links::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Each row (after JS decorate) contains a single .quick-links-card link */
 .quick-links>div {
   display: flex;
+  flex-shrink: 0;
   width: 160px;
   min-height: 144px;
   border: 1px solid var(--ql-card-border);
@@ -24,6 +33,7 @@
   box-sizing: border-box;
   transition: box-shadow 0.2s ease;
   background: var(--background-color, #fff);
+  scroll-snap-align: start;
 }
 
 .quick-links>div:hover {
@@ -67,11 +77,11 @@
 
 @media (width < 600px) {
   .quick-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .quick-links>div {
-    width: calc(33.33% - var(--ql-gap));
+    width: 140px;
     min-height: 120px;
   }
 }
