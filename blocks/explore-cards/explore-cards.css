@@ -1,4 +1,8 @@
 .explore-cards-wrapper {
+  /* background: var(--light-color, rgb(255, 250, 246)); */
+}
+
+.section.explore-cards-container {
   background: var(--light-color, rgb(255, 250, 246));
 }
 
@@ -15,14 +19,14 @@
   padding: 40px 0;
 }
 
-.explore-cards > div {
+.explore-cards>div {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
 /* Left column: intro text */
-.explore-cards > div > div:first-child p:first-child {
+.explore-cards>div>div:first-child p:first-child {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -30,14 +34,14 @@
   margin: 0 0 8px;
 }
 
-.explore-cards > div > div:first-child h3 {
+.explore-cards>div>div:first-child h3 {
   font-size: 38px;
   font-weight: 700;
   margin: 0 0 8px;
   line-height: 1.2;
 }
 
-.explore-cards > div > div:first-child p:nth-child(3) {
+.explore-cards>div>div:first-child p:nth-child(3) {
   font-size: 14px;
   margin: 0 0 24px;
 }
@@ -66,13 +70,13 @@ main .explore-cards .button-wrapper {
 }
 
 /* Right column: card grid */
-.explore-cards > div > div:last-child {
+.explore-cards>div>div:last-child {
   display: grid;
   grid-template-columns: repeat(3, var(--card-size));
   gap: 24px;
 }
 
-.explore-cards > div > div:last-child p {
+.explore-cards>div>div:last-child p {
   background: var(--card-bg);
   border-radius: var(--card-radius);
   width: var(--card-size);
@@ -89,25 +93,30 @@ main .explore-cards .button-wrapper {
   cursor: pointer;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-direction: column;
 }
 
-.explore-cards > div > div:last-child p:hover {
+.explore-cards>div>div:last-child p:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-@media (width >= 900px) {
-  .explore-cards > div {
+.explore-card img {
+  max-width: 4rem;
+}
+
+@media (width >=900px) {
+  .explore-cards>div {
     flex-direction: row;
     align-items: flex-start;
   }
 
-  .explore-cards > div > div:first-child {
+  .explore-cards>div>div:first-child {
     flex: 0 0 45%;
     padding-right: 40px;
     padding-top: 16px;
   }
 
-  .explore-cards > div > div:last-child {
+  .explore-cards>div>div:last-child {
     flex: 0 0 55%;
   }
 }
