@@ -14,12 +14,12 @@
 
 :root {
   /* colors */
-  --background-color: #ffffff;
-  --light-color: rgb(255, 250, 246);
-  --dark-color: rgb(19, 51, 89);
-  --text-color: rgb(0, 0, 0);
-  --link-color: rgb(19, 51, 89);
-  --link-hover-color: rgb(13, 35, 62);
+  --background-color: #fff;
+  --light-color: rgb(255 250 246);
+  --dark-color: rgb(19 51 89);
+  --text-color: rgb(0 0 0);
+  --link-color: rgb(19 51 89);
+  --link-hover-color: rgb(13 35 62);
 
   /* fonts */
   --body-font-family: "Mulish", "Lato", sans-serif;
@@ -42,23 +42,7 @@
   --nav-height: 64px;
 }
 
-/* global EDS button reset */
-main .button-container {
-  display: inline;
-}
 
-main a.button:any-link {
-  background: none;
-  border: none;
-  border-radius: 0;
-  color: var(--link-color);
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0;
-  margin: 0;
-  text-decoration: underline;
-  white-space: normal;
-}
 
 /* fallback fonts */
 @font-face {
@@ -226,6 +210,24 @@ button.button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* global EDS button reset */
+main .button-container {
+  display: inline;
+}
+
+main a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  white-space: normal;
 }
 
 a.button[aria-disabled="true"],

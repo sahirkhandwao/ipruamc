@@ -4,11 +4,12 @@
 }
 
 .hero {
-  --hero-bg: var(--light-color, rgb(255, 250, 246));
-  --hero-text: #ffffff;
+  --hero-bg: var(--light-color, rgb(255 250 246));
+  --hero-text: #fff;
   --hero-heading-size: 42px;
   --hero-desc-size: 20px;
   --hero-padding: 40px 24px;
+
   position: relative;
   background: var(--hero-bg);
   overflow: hidden;
@@ -87,7 +88,7 @@ main .hero .hero-slide .hero-text a.button:any-link {
   display: inline-flex;
   align-items: center;
   background: #fcfcfa;
-  color: rgb(19, 51, 89);
+  color: rgb(19 51 89);
   font-size: 16px;
   font-weight: 700;
   padding: 8px 20px;
@@ -99,8 +100,8 @@ main .hero .hero-slide .hero-text a.button:any-link {
 
 main .hero .hero-slide .hero-text a.button.secondary:any-link {
   background: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
 }
 

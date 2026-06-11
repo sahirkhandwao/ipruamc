@@ -1,6 +1,6 @@
 .quick-links {
-  --ql-heading-color: var(--dark-color, rgb(19, 51, 89));
-  --ql-card-border: rgba(19, 51, 89, 0.2);
+  --ql-heading-color: var(--dark-color, rgb(19 51 89));
+  --ql-card-border: rgb(19 51 89 / 20%);
   --ql-card-radius: 8px;
   --ql-card-padding: 16px;
   --ql-icon-size: 32px;
@@ -27,7 +27,7 @@
 }
 
 .quick-links>div:hover {
-  box-shadow: 0 2px 8px rgba(19, 51, 89, 0.12);
+  box-shadow: 0 2px 8px rgb(19 51 89 / 12%);
 }
 
 .quick-links .quick-links-card {
@@ -41,9 +41,6 @@
 }
 
 .quick-links .quick-links-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #f9ebe0;
   width: 4rem;
   height: 4rem;

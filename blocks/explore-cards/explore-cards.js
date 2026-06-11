@@ -1,3 +1,12 @@
+const iconMapping = {
+  'Equity Funds': 'equity-icon.svg',
+  'Hybrid Funds': 'hybrid-icon.svg',
+  'Debt Funds': 'debt-icon.svg',
+  'Solution Oriented Funds': 'solution-icon.svg',
+  'Fund of Funds': 'fof-icon.svg',
+  'Index Funds': 'index-icon.svg',
+};
+
 export default async function decorate(block) {
   // Block has one row with two cells:
   // Cell 1: intro text + CTA
@@ -19,6 +28,14 @@ export default async function decorate(block) {
     const paragraphs = [...cardsCell.querySelectorAll('p')];
     paragraphs.forEach((p) => {
       p.classList.add('explore-card');
+      const text = p.textContent.trim();
+      const iconName = iconMapping[text];
+      if (iconName) {
+        const img = document.createElement('img');
+        img.src = `${window.hlx.codeBasePath}/assets/images/${iconName}`;
+        img.alt = text;
+        p.prepend(img);
+      }
     });
   }
 }

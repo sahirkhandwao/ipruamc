@@ -7,7 +7,7 @@
   --block-bg: #ffe3cc;
   --block-text: #633f3f;
   --block-btn-bg: #2f6d9c;
-  --block-btn-text: #ffffff;
+  --block-btn-text: #fff;
   --block-radius: 16px;
 
   background: var(--block-bg);
@@ -40,6 +40,7 @@
 /* Text content cell */
 .announcement>div>div:nth-child(2) {
   flex: 1;
+
   /* display: flex; */
   align-items: center;
   gap: 6px;

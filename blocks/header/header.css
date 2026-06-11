@@ -99,10 +99,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1320px;
   margin: 0 auto;
   height: 80px;
-  padding: 0 32px;
   position: relative;
   box-sizing: border-box;
   max-width: 1270px;
@@ -136,6 +134,7 @@ header {
   display: flex;
   align-items: center;
   position: static;
+
   /* Required for full-width mega menu */
 }
 
@@ -161,6 +160,7 @@ header {
   width: 100%;
   background: #fff;
   box-shadow: 0 15px 35px rgb(0 0 0 / 8%);
+
   /* border-top: 4px solid var(--header-orange); */
   border-radius: 0 0 16px;
   z-index: 10;
@@ -351,8 +351,6 @@ header {
 /* Search AI button */
 .utility-search-ai {
   background: none;
-  border: none;
-  padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -530,7 +528,6 @@ header {
 }
 
 .drawer-item a {
-  display: block;
   padding: 12px 0;
   color: var(--header-blue);
   font-weight: 700;
@@ -600,6 +597,7 @@ header {
 
 .drawer-actions {
   display: flex;
+
   /* flex-direction: column; */
   gap: 1rem;
 }
@@ -686,7 +684,7 @@ header {
 .investor-dropdown-menu>li>p {
   margin: 0 16px;
   padding: 6px 0 10px;
-  font-family: "Mulish";
+  font-family: Mulish, sans-serif;
   font-style: normal;
   font-size: .75rem;
   line-height: 1rem;
@@ -698,7 +696,6 @@ header {
 
 /* Desktop view */
 @media (width >=900px) {
-
   /* Push primary main content down to account for fixed header */
   body {
     padding-top: 112px;
@@ -727,14 +724,10 @@ header {
   .utility-search-ai::before {
     content: "";
     position: absolute;
-    top: -.125rem;
-    left: -.125rem;
-    right: -.125rem;
-    bottom: -.125rem;
+    inset: -.125rem;
     border-radius: .5rem;
     border-style: solid;
     border-color: transparent;
-    -webkit-animation: borderAnimation 2s linear infinite;
     animation: borderAnimation 2s linear infinite;
   }
 

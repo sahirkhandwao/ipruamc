@@ -1,12 +1,12 @@
 /* Contact Form Block */
 .contact-form {
-  --cf-bg: rgb(255, 250, 246);
-  --cf-card-bg: #ffffff;
-  --cf-heading-color: rgb(19, 51, 89);
-  --cf-text-color: rgba(19, 51, 89, 0.7);
-  --cf-btn-bg: rgb(220, 96, 9);
-  --cf-btn-color: #ffffff;
-  --cf-tagline-color: rgba(19, 51, 89, 0.7);
+  --cf-bg: rgb(255 250 246);
+  --cf-card-bg: #fff;
+  --cf-heading-color: rgb(19 51 89);
+  --cf-text-color: rgb(19 51 89 / 70%);
+  --cf-btn-bg: rgb(220 96 9);
+  --cf-btn-color: #fff;
+  --cf-tagline-color: rgb(19 51 89 / 70%);
   --cf-padding: 48px;
   --cf-border-radius: 12.8px;
 
@@ -26,13 +26,13 @@ main > .section:has(.contact-form-wrapper) {
 }
 
 /* Tagline row */
-.contact-form > div:first-child {
+.contact-form .contact-form-tagline {
   max-width: 1080px;
   margin: 0 auto;
   padding: 32px 0 16px;
 }
 
-.contact-form > div:first-child p {
+.contact-form .contact-form-tagline p {
   font-size: 14px;
   color: var(--cf-tagline-color);
   font-weight: 700;
@@ -54,18 +54,18 @@ main > .section:has(.contact-form-wrapper) {
 }
 
 /* Image cell */
-.contact-form > div:nth-child(2) > div:first-child {
+.contact-form .contact-form-image {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contact-form > div:nth-child(2) > div:first-child p {
+.contact-form .contact-form-image p {
   margin: 0;
 }
 
-.contact-form > div:nth-child(2) > div:first-child img {
+.contact-form .contact-form-image img {
   max-width: 100%;
   width: 400px;
   height: auto;
@@ -73,61 +73,121 @@ main > .section:has(.contact-form-wrapper) {
 }
 
 /* Form content cell */
-.contact-form > div:nth-child(2) > div:nth-child(2) > p {
+.contact-form .contact-form-content > p {
   font-size: 14px;
   color: var(--cf-text-color);
   margin: 0 0 16px;
   line-height: 1.5;
 }
 
-/* Form fields list as static representation */
-.contact-form ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px;
+/* Form fields list styling */
+.contact-form .cf-expert-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 400px;
+  margin-top: 24px;
 }
 
-.contact-form ul li {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(19, 51, 89, 0.2);
+.contact-form .cf-form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.contact-form .cf-mobile-group {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.contact-form .cf-input,
+.contact-form .cf-select {
+  padding: 12px 16px;
+  border: 1px solid rgb(19 51 89 / 20%);
+  border-radius: 4px;
   font-size: 14px;
-  color: var(--cf-text-color);
+  font-family: inherit;
+  color: var(--cf-heading-color);
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* CTA Button */
-main .contact-form a.button:any-link {
+.contact-form .cf-country-code {
+  width: 80px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.contact-form .cf-input:focus,
+.contact-form .cf-select:focus {
+  border-color: var(--cf-btn-bg);
+  box-shadow: 0 0 0 3px rgb(220 96 9 / 15%);
+}
+
+.contact-form .cf-submit-btn {
   background: var(--cf-btn-bg);
   color: var(--cf-btn-color);
   border: none;
   border-radius: 4px;
-  padding: 10px 28px;
+  padding: 12px 28px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  text-decoration: none;
-  display: inline-block;
   cursor: pointer;
-  white-space: nowrap;
+  transition: background-color 0.2s, transform 0.1s;
+  width: fit-content;
+  margin-top: 8px;
 }
 
-main .contact-form a.button:any-link:hover {
-  background: rgb(190, 82, 5);
+.contact-form .cf-submit-btn:hover {
+  background: rgb(190 82 5);
 }
 
-/* Button wrapper */
-main .contact-form .button-wrapper {
+.contact-form .cf-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.contact-form .cf-error-msg {
+  color: #d9383a;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.contact-form .cf-success-msg {
+  background-color: rgb(39 174 96 / 8%);
+  border: 1px solid rgb(39 174 96 / 30%);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  max-width: 400px;
   margin-top: 24px;
-  margin-bottom: 0;
+  box-sizing: border-box;
 }
+
+.contact-form .cf-success-msg h3 {
+  color: #27ae60;
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contact-form .cf-success-msg p {
+  color: var(--cf-heading-color);
+  margin: 0;
+  font-size: 14px;
+}
+
 
 /* Disclaimer */
 .contact-form > div:nth-child(2) > div:nth-child(2) > p:last-child {
   font-size: 11px;
-  color: rgba(19, 51, 89, 0.5);
+  color: rgb(19 51 89 / 50%);
   margin-top: 16px;
   line-height: 1.4;
   font-style: italic;

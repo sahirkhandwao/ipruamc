@@ -1,9 +1,9 @@
 footer {
-  --footer-bg: linear-gradient(90.26deg, rgb(19, 51, 89) 0.22%, rgb(1, 74, 128) 50.17%, rgb(50, 103, 143) 99.78%);
-  --footer-text: #ffffff;
-  --footer-bottom-bg: rgb(10, 29, 59);
-  --footer-link-color: rgba(255, 255, 255, 0.85);
-  --footer-heading-color: #ffffff;
+  --footer-bg: linear-gradient(90.26deg, rgb(19 51 89) 0.22%, rgb(1 74 128) 50.17%, rgb(50 103 143) 99.78%);
+  --footer-text: #fff;
+  --footer-bottom-bg: rgb(10 29 59);
+  --footer-link-color: rgb(255 255 255 / 85%);
+  --footer-heading-color: #fff;
   --footer-max-width: 1080px;
 
   background: var(--footer-bg);
@@ -72,7 +72,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -102,7 +102,7 @@ footer .footer-app {
   max-width: var(--footer-max-width);
   margin: 0 auto;
   padding: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgb(255 255 255 / 15%);
 }
 
 footer .footer-app > div {
@@ -110,11 +110,6 @@ footer .footer-app > div {
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
-}
-
-footer .footer-app > div > div:first-child img {
-  max-height: 100px;
-  width: auto;
 }
 
 footer .footer-app h3 {
@@ -129,11 +124,26 @@ footer .footer-app p {
   display: inline-block;
 }
 
-footer .footer-app p a img,
-footer .footer-app p img {
+footer .footer-app p img,
+footer .footer-app p a img {
   max-height: 36px;
   width: auto;
   margin-right: 10px;
+}
+
+footer .footer-app > div > div:first-child img {
+  max-height: 100px;
+  width: auto;
+}
+
+footer .footer-bottom > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  gap: 12px;
 }
 
 /* Footer Bottom Block */
@@ -159,32 +169,22 @@ footer .footer-bottom {
   box-sizing: border-box;
 }
 
-footer .footer-bottom > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: var(--footer-max-width);
-  margin: 0 auto;
-  gap: 12px;
-}
-
 footer .footer-bottom p {
   margin: 0;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(255 255 255 / 75%);
   line-height: 1.5;
 }
 
-footer .footer-bottom a {
-  color: rgba(255, 255, 255, 0.9);
+footer .footer-bottom-wrapper .footer-bottom a {
+  color: rgb(255 255 255 / 90%);
   text-decoration: none;
   font-weight: 600;
 }
 
-footer .footer-bottom a:hover {
+footer .footer-bottom-wrapper .footer-bottom a:hover {
   text-decoration: underline;
-  color: #ffffff;
+  color: #fff;
 }
 
 @media (width >= 900px) {

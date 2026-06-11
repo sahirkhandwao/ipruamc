@@ -1,15 +1,15 @@
 /* Recommended Schemes Block */
 .recommended-schemes {
-  --rs-bg: rgb(255, 250, 246);
-  --rs-heading-color: rgb(19, 51, 89);
+  --rs-bg: rgb(255 250 246);
+  --rs-heading-color: rgb(19 51 89);
   --rs-card-bg: #fff;
   --rs-card-radius: 12px;
-  --rs-card-shadow: rgba(111, 126, 144, 0.25) 0px 2px 10px 0px;
-  --rs-chip-bg: rgb(89, 113, 192);
+  --rs-card-shadow: rgb(111 126 144 / 25%) 0px 2px 10px 0px;
+  --rs-chip-bg: rgb(89 113 192);
   --rs-chip-text: #fff;
-  --rs-cta-bg: rgb(220, 96, 9);
+  --rs-cta-bg: rgb(220 96 9);
   --rs-cta-text: #fff;
-  --rs-cagr-color: rgb(19, 51, 89);
+  --rs-cagr-color: rgb(19 51 89);
 
   padding: 40px 0;
 }
@@ -18,7 +18,7 @@
 .recommended-schemes-wrapper {
   max-width: 100% !important;
   padding: 0 !important;
-  background-color: rgb(255, 250, 246);
+  background-color: rgb(255 250 246);
 }
 
 .recommended-schemes > div {
@@ -66,22 +66,24 @@
 }
 
 /* Riskometer image cell */
-.recommended-schemes .rs-card > div:first-child {
+.recommended-schemes .rs-card .rs-risk-cell {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 12px;
 }
 
-.recommended-schemes .rs-card > div:first-child img {
-  width: 50px;
-  height: auto;
+.recommended-schemes .rs-card .rs-risk-cell img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
 }
 
 /* Fund name cell */
 .recommended-schemes .rs-card > div:nth-child(2) p {
   margin: 0;
   font-size: 12px;
-  color: rgba(19, 51, 89, 0.7);
+  color: rgb(19 51 89 / 70%);
 }
 
 .recommended-schemes .rs-card > div:nth-child(2) h3 {
@@ -113,23 +115,41 @@
 }
 
 /* CAGR cell */
-.recommended-schemes .rs-card > div:nth-child(4) {
+.recommended-schemes .rs-card .rs-cagr-cell {
   margin-top: 16px;
   padding-top: 12px;
   border-top: 1px solid #eee;
 }
 
-.recommended-schemes .rs-card > div:nth-child(4) p {
+.recommended-schemes .rs-card .rs-cagr-cell .rs-cagr-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   margin: 0;
   font-size: 10px;
-  color: rgba(19, 51, 89, 0.7);
+  color: rgb(19 51 89 / 70%);
 }
 
-.recommended-schemes .rs-card > div:nth-child(4) h4 {
+.recommended-schemes .rs-card .rs-cagr-cell .rs-info-icon {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+
+.recommended-schemes .rs-card .rs-cagr-cell .rs-cagr-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 4px 0;
   font-size: 22px;
   font-weight: 700;
   color: var(--rs-cagr-color);
+}
+
+.recommended-schemes .rs-card .rs-cagr-cell .rs-arrow-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
 }
 
 /* Invest button cell */
@@ -156,12 +176,12 @@ main .recommended-schemes .rs-card a.button:any-link {
 }
 
 main .recommended-schemes .rs-card a.button:any-link:hover {
-  background: rgb(190, 80, 5);
+  background: rgb(190 80 5);
   text-decoration: none;
 }
 
 /* Explore all row (last row) */
-.recommended-schemes > div:last-child {
+.recommended-schemes .rs-explore {
   text-align: center;
   margin-top: 24px;
   background: none;
@@ -172,7 +192,7 @@ main .recommended-schemes .rs-card a.button:any-link:hover {
   padding: 0 24px;
 }
 
-.recommended-schemes > div:last-child a {
+.recommended-schemes .rs-explore a {
   color: var(--rs-cta-bg);
   font-size: 14px;
   font-weight: 700;
@@ -181,7 +201,7 @@ main .recommended-schemes .rs-card a.button:any-link:hover {
   letter-spacing: 0.5px;
 }
 
-.recommended-schemes > div:last-child a:hover {
+.recommended-schemes .rs-explore a:hover {
   text-decoration: underline;
 }
 
