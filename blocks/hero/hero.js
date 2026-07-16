@@ -1,13 +1,6 @@
 export default async function decorate(block) {
   const rows = [...block.children];
 
-  // Add background SVG image
-  const bgImg = document.createElement('img');
-  bgImg.src = '/assets/images/heroHeaderDesktop.svg';
-  bgImg.alt = '';
-  bgImg.className = 'hero-bg-image';
-  bgImg.setAttribute('aria-hidden', 'true');
-  block.prepend(bgImg);
 
   // Transform each row into a slide
   rows.forEach((row, index) => {
